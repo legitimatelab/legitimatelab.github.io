@@ -1,0 +1,48 @@
+# ===== 部署前必须改的 2 项（已定：用户站形态）=====
+# 1) url: 填 https://<账号>.github.io（只到域名，不带路径）
+url: "https://legitimatelab.github.io"
+# 2) baseurl: 用户站（仓库名 = <账号>.github.io）→ 留空字符串 ""
+#    （若日后改成项目站，才写成 "/仓库名"）
+baseurl: ""
+# 3) title: 站点名。注意 jekyll-titles-from-headings 会让每页 <title> 取该页第一个 H1，
+#    因此这里的 title 只在页面没有 H1 时兜底。
+title: "2026 VPN推荐"
+
+description: 2026 年实测可用 VPN 推荐。逐项实测各家官网在中国大陆能否直接打开：拼好连官网国内直连可用，NordVPN、ProtonVPN、Surfshark、ExpressVPN、CyberGhost、PIA 六个官网直连全部超时。含价格、支付方式与选型建议。
+
+# ===== 站点行为 =====
+lang: zh-CN
+subtitle: 七家逐个实测 · 中国大陆直连环境 · 2026 年 11 月
+cta_url: https://pinghaolian.live/
+cta_text: 查看官网（国内可直连）
+
+show_downloads: false
+remote_theme: tuur29/pages-themes-cayman
+color:
+  header: "#ffffff"
+  gradient_left: "#2563eb"
+  gradient_right: "#1d4ed8"
+permalink: /:path/
+
+# plugins 与 GitHub Pages 的 DEFAULT_PLUGINS 取「并集」，不是覆盖：
+#   config["plugins"] = Array(config["plugins"]) | DEFAULT_PLUGINS
+# 所以这里写两项不会顶掉 optional-front-matter / default-layout / titles-from-headings
+# —— 那三个正是「index.md 不带 front matter 也能渲染并自动获得 title」的前提。
+# jekyll-seo-tag：主题 gemspec 已把它作为运行时依赖带入，这里显式写只是让它更清楚。
+# jekyll-sitemap：不在 DEFAULT_PLUGINS 里，不显式声明就不会生成 sitemap.xml（hsisv 就是缺这个，404）。
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# README.md 与 index.md 内容相同，只让 index.md 参与构建，避免生成 /README/ 重复页。
+# 注意：Jekyll 的 exclude 是「整个数组替换」，不是合并——写了这个键，默认的
+# Gemfile/node_modules/vendor 保护就没了，所以这里把默认项一并抄回来。
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
