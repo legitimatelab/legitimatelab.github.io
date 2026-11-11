@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 320" width="840" height="320" role="img" aria-labelledby="tt">
+  <title id="tt">深度包检测看到的两种流量：自定义协议的头部特征固定、容易识别；伪装成 TLS 的流量与真实网站无法区分</title>
+  <style>
+    .head{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;font-size:13px;fill:#64748b;letter-spacing:0.5px}
+    .lab{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;font-size:15px;fill:#0f172a;font-weight:600}
+    .seg{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;font-size:12.5px;fill:#1e293b;text-anchor:middle}
+    .verdict{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;font-size:13.5px}
+  </style>
+
+  <text class="head" x="420" y="28" text-anchor="middle">深度包检测（DPI）看到的流量形态</text>
+
+  <text class="lab" x="24" y="84">自定义加密代理</text>
+  <text class="lab" x="24" y="104" style="font-weight:400;font-size:12px;fill:#94a3b8">协议自己发明，格式固定</text>
+  <rect x="210" y="54" width="150" height="58" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5"/>
+  <rect x="360" y="54" width="150" height="58" fill="#fdba74" stroke="#ea580c" stroke-width="1.5"/>
+  <rect x="510" y="54" width="120" height="58" fill="#fdba74" stroke="#ea580c" stroke-width="1.5"/>
+  <text class="seg" x="285" y="88">自研头部</text>
+  <text class="seg" x="435" y="88">固定字段</text>
+  <text class="seg" x="570" y="88">加密体</text>
+  <text class="verdict" x="652" y="78" fill="#be123c">特征固定</text>
+  <text class="verdict" x="652" y="98" fill="#be123c">→ 易被识别</text>
+
+  <text class="lab" x="24" y="224">伪装成常规 HTTPS</text>
+  <text class="lab" x="24" y="244" style="font-weight:400;font-size:12px;fill:#94a3b8">与真实网站使用同一套握手</text>
+  <rect x="210" y="194" width="150" height="58" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="360" y="194" width="150" height="58" fill="#bfdbfe" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="510" y="194" width="120" height="58" fill="#bfdbfe" stroke="#2563eb" stroke-width="1.5"/>
+  <text class="seg" x="285" y="228">标准 TLS 头</text>
+  <text class="seg" x="435" y="228">SNI / 扩展</text>
+  <text class="seg" x="570" y="228">加密体</text>
+  <text class="verdict" x="652" y="218" fill="#047857">与真实流量同类</text>
+  <text class="verdict" x="652" y="238" fill="#047857">→ 难以区分</text>
+</svg>
