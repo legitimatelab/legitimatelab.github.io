@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" role="img" aria-labelledby="tt">
+  <title id="tt">购买死循环：想买 VPN，打开官网却打不开，必须先有一个能翻墙的工具，而那个工具正是你想买的 VPN</title>
+  <style>
+    .lbl{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;font-size:17px;fill:#0f172a;text-anchor:middle}
+    .sub{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;font-size:13px;fill:#475569;text-anchor:middle}
+    .mid{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;font-size:14px;fill:#94a3b8;text-anchor:middle}
+    .arr{stroke:#2563eb;stroke-width:2.5;fill:none;marker-end:url(#arw)}
+  </style>
+  <defs>
+    <marker id="arw" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto">
+      <path d="M0,0 L7.5,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect x="30" y="34" width="250" height="76" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text class="lbl" x="155" y="68">① 想买一个 VPN</text>
+  <text class="sub" x="155" y="92">找一个国内能用的</text>
+
+  <rect x="520" y="34" width="250" height="76" rx="10" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+  <text class="lbl" x="645" y="68">② 打开官网</text>
+  <text class="sub" x="645" y="92">中国大陆直连超时</text>
+
+  <rect x="520" y="230" width="250" height="76" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text class="lbl" x="645" y="264">③ 得先有一个</text>
+  <text class="sub" x="645" y="288">能翻墙的工具</text>
+
+  <rect x="30" y="230" width="250" height="76" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text class="lbl" x="155" y="264">④ 而它正是</text>
+  <text class="sub" x="155" y="288">此刻想买的东西</text>
+
+  <path class="arr" d="M285 72 H 508"/>
+  <path class="arr" d="M645 114 V 222"/>
+  <path class="arr" d="M516 268 H 292"/>
+  <path class="arr" d="M155 226 V 118"/>
+
+  <text class="mid" x="400" y="176">闭环，没有出口</text>
+</svg>
