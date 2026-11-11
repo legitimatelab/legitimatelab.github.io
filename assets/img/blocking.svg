@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img" aria-labelledby="tt">
+  <title id="tt">跨境访问经过三道关卡：DNS 解析被污染、目标 IP 被封锁、协议特征在握手阶段被识别</title>
+  <style>
+    .stage{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;font-size:16px;fill:#0f172a;font-weight:600}
+    .note{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;font-size:12.5px;fill:#64748b}
+    .res{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;font-size:13px;fill:#334155}
+    .band{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;font-size:13px;fill:#be123c;letter-spacing:1px}
+    .ln{stroke:#94a3b8;stroke-width:2;fill:none}
+    .lnf{stroke:#cbd5e1;stroke-width:2;fill:none;stroke-dasharray:5 5}
+  </style>
+  <defs>
+    <marker id="g" markerWidth="8" markerHeight="8" refX="6.5" refY="2.7" orient="auto">
+      <path d="M0,0 L6.5,2.7 L0,5.4 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect x="355" y="24" width="110" height="352" rx="8" fill="#fff1f2" stroke="#fda4af" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text class="band" x="410" y="200" text-anchor="middle" transform="rotate(-90 410 200)">跨境审查设备</text>
+
+  <text class="stage" x="26" y="86">① DNS 解析</text>
+  <text class="note" x="26" y="108">问：这个域名对应哪个 IP</text>
+  <path class="ln" d="M215 92 H 348" marker-end="url(#g)"/>
+  <path class="lnf" d="M472 92 H 566"/>
+  <circle cx="410" cy="92" r="16" fill="#fff" stroke="#e11d48" stroke-width="2.5"/>
+  <path d="M403 85 L417 99 M417 85 L403 99" stroke="#e11d48" stroke-width="2.5" fill="none"/>
+  <text class="res" x="582" y="86">返回伪造 IP 或无响应，</text>
+  <text class="res" x="582" y="106">你连到的是别人的服务器</text>
+
+  <text class="stage" x="26" y="194">② 连接目标 IP</text>
+  <text class="note" x="26" y="216">拿到地址后发起 TCP 握手</text>
+  <path class="ln" d="M215 200 H 348" marker-end="url(#g)"/>
+  <path class="lnf" d="M472 200 H 566"/>
+  <circle cx="410" cy="200" r="16" fill="#fff" stroke="#e11d48" stroke-width="2.5"/>
+  <path d="M403 193 L417 207 M417 193 L403 207" stroke="#e11d48" stroke-width="2.5" fill="none"/>
+  <text class="res" x="582" y="194">目标 IP 在封锁名单里，</text>
+  <text class="res" x="582" y="214">握手包直接被丢弃</text>
+
+  <text class="stage" x="26" y="302">③ 协议特征识别</text>
+  <text class="note" x="26" y="324">连接已建立，检查流量长什么样</text>
+  <path class="ln" d="M240 308 H 348" marker-end="url(#g)"/>
+  <path class="lnf" d="M472 308 H 566"/>
+  <circle cx="410" cy="308" r="16" fill="#fff" stroke="#e11d48" stroke-width="2.5"/>
+  <path d="M403 301 L417 315 M417 301 L403 315" stroke="#e11d48" stroke-width="2.5" fill="none"/>
+  <text class="res" x="582" y="302">SNI 或握手特征命中，</text>
+  <text class="res" x="582" y="322">连接被中途重置</text>
+</svg>
