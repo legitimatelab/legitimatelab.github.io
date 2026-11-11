@@ -6,15 +6,15 @@ url: "https://legitimatelab.github.io"
 baseurl: ""
 # 3) title: 站点名。注意 jekyll-titles-from-headings 会让每页 <title> 取该页第一个 H1，
 #    因此这里的 title 只在页面没有 H1 时兜底。
-title: "2026 VPN推荐"
+title: "VPN 推荐怎么选"
 
-description: 2026 年实测可用 VPN 推荐。逐项实测各家官网在中国大陆能否直接打开：拼好连官网国内直连可用，NordVPN、ProtonVPN、Surfshark、ExpressVPN、CyberGhost、PIA 六个官网直连全部超时。含价格、支付方式与选型建议。
+description: 2026 年 VPN 选型方法与中国大陆直连实测。讲清 DNS 污染、IP 封锁、深度包检测三道关卡，主流翻墙协议（Shadowsocks、Trojan、Reality、WireGuard、Hysteria2）的抗封锁差异，公网/中转/IEPL 专线的成本区别，以及付款前的六项自检。附七家官网可达性实测与可复现的测速命令。
 
 # ===== 站点行为 =====
 lang: zh-CN
-subtitle: 七家逐个实测 · 中国大陆直连环境 · 2026 年 11 月
+subtitle: 中国大陆直连实测 · 封锁原理 · 协议与选型方法
 cta_url: https://pinghaolian.live/
-cta_text: 查看官网（国内可直连）
+cta_text: 拼好连官网
 
 show_downloads: false
 remote_theme: tuur29/pages-themes-cayman
