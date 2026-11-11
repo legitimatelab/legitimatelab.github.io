@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="860" height="380" role="img" aria-labelledby="tt">
+  <title id="tt">三条出境路径对比：公网直连会经过审查设备、普通加密隧道底层仍走公网、IEPL/IPLC 私有专线不经过公网审查设备</title>
+  <style>
+    .name{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;font-size:15px;fill:#0f172a;font-weight:600}
+    .note{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;font-size:12.5px}
+    .node{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;font-size:12px;fill:#475569}
+  </style>
+
+  <text class="name" x="24" y="62">① 公网直连</text>
+  <circle cx="250" cy="82" r="8" fill="#fff" stroke="#475569" stroke-width="2"/>
+  <text class="node" x="250" y="108" text-anchor="middle">国内</text>
+  <path d="M262 82 H 740" stroke="#94a3b8" stroke-width="2" stroke-dasharray="7 6"/>
+  <circle cx="772" cy="82" r="8" fill="#fff" stroke="#475569" stroke-width="2"/>
+  <text class="node" x="772" y="108" text-anchor="middle">境外</text>
+  <rect x="440" y="66" width="120" height="32" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5"/>
+  <text class="note" x="500" y="87" text-anchor="middle" fill="#be123c">经过审查设备</text>
+  <path d="M496 74 L504 90 M504 74 L496 90" stroke="#e11d48" stroke-width="2" fill="none"/>
+  <text class="note" x="760" y="140" text-anchor="end" fill="#be123c">三关全暴露，随时可能中断</text>
+
+  <text class="name" x="24" y="192">② 普通 VPN / 代理隧道</text>
+  <circle cx="250" cy="212" r="8" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text class="node" x="250" y="238" text-anchor="middle">国内</text>
+  <path d="M262 206 H 740" stroke="#2563eb" stroke-width="2.5"/>
+  <path d="M262 218 H 740" stroke="#2563eb" stroke-width="2.5"/>
+  <circle cx="772" cy="212" r="8" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text class="node" x="772" y="238" text-anchor="middle">境外</text>
+  <rect x="430" y="196" width="140" height="32" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text class="note" x="500" y="217" text-anchor="middle" fill="#1d4ed8">加密内容，底层仍是公网</text>
+  <text class="note" x="760" y="270" text-anchor="end" fill="#1d4ed8">能不能过第三关，取决于协议伪装强度</text>
+
+  <text class="name" x="24" y="322">③ IEPL / IPLC 专线</text>
+  <circle cx="250" cy="342" r="8" fill="#fff" stroke="#047857" stroke-width="2"/>
+  <text class="node" x="250" y="368" text-anchor="middle">国内</text>
+  <path d="M262 342 H 740" stroke="#047857" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="772" cy="342" r="8" fill="#fff" stroke="#047857" stroke-width="2"/>
+  <text class="node" x="772" y="368" text-anchor="middle">境外</text>
+  <rect x="424" y="326" width="152" height="32" rx="6" fill="#ecfdf5" stroke="#047857" stroke-width="1.5"/>
+  <text class="note" x="500" y="347" text-anchor="middle" fill="#047857">私有专线，不走公网</text>
+</svg>
